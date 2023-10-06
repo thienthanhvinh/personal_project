@@ -8,6 +8,7 @@
     @vite('resources/css/app.css')
 </head>
 <body>
-    <h2 class="text-right text-blue-500">Welcome to index</h2>
+    <h2 class="text-blue-500 text-center">Welcome to index</h2>
+    
 </body>
 </html>
