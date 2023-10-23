@@ -35,3 +35,4 @@ Route::get('/account/login', [UserController::class, 'login']);
 Route::get('/account/register', [UserController::class, 'register']);
 Route::get('/account/passwordRecovery', [UserController::class, 'passwordRecovery']);
 Route::get('/cart/detail', [CartController::class, 'detail']);
+Route::get('/cart/checkout', [CartController::class, 'checkout']);

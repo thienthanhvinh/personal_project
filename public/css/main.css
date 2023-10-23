@@ -205,24 +205,27 @@
     left: 40%;
     bottom: -10px;
 }
-.cart-table th {
-    padding: 10px 40px;
-
+.cart-table {
+    margin: 0px 0px;
+    padding: 0px;
 }
-.cart-table td {
-    padding: 10px 40px;
+.cart-table tr th {
+    color: rgb(130, 130, 130);
+}
+.cart-table th, td {
+    padding: 10px 35px;
     text-align: center;
 }
+.cart-table tbody tr {
+    border-bottom: 1px solid rgb(208, 208, 208);
+    height: 200px;
+}
 .cart-table .cart-table-header {
-    border: 1px solid rgb(196, 196, 196);
+    border: 1px solid rgb(208, 208, 208);
     border-left: 0;
     border-right: 0;
 }
-.cart-table span {
-    width: 100%;
-    font-size: 20px;
-    
-}
+
 .cart-table .num {
     border-left: 1px solid black;
     border-right: 1px solid black;
@@ -235,3 +238,37 @@
 .cart-table input {
     text-align: center;
 }
+
+.table-test th, td {
+    padding: 10px 20px;
+}
+.table-test thead {
+    border: 1px solid rgb(208, 208, 208);
+    border-left: 0;
+    border-right: 0;
+}
+
+.table-test {
+    margin: 30px 100px;
+}
+
+.form-group input:focus ~ label,
+.form-group input:valid ~ label
+ {
+    top: -12px;
+    background-color: #fff;
+    font-size: 15px;
+    transition: all 0.4s;
+}
+
+.form-group textarea:focus ~ label,
+.form-group textarea:valid ~ label {
+    top: -12px;
+    background-color: #fff;
+    font-size: 15px;
+    transition: all 0.4s;
+}
+
+
+
+

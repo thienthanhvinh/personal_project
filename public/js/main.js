@@ -54,7 +54,6 @@ $(document).ready(function () {
         focusOnSelect: true,
         arrows: false,
     });
- 
 
     $("li").on("click", function () {
         $(this).siblings().removeClass("active");
@@ -65,7 +64,6 @@ $(document).ready(function () {
     priceBtn.addEventListener("click", () => {
         priceBtn.classList.toggle("open");
     });
-
 });
 
 // const plus = document.querySelector(".plus");
@@ -84,25 +82,30 @@ $(document).ready(function () {
 //     }
 // });
 
-document.querySelector(".minus").setAttribute("disabled", "disabled");
+// document.querySelectorAll(".minus").forEach((button) => {
+//     button.setAttribute("disabled", "disabled");
+// })
 
+document.querySelectorAll(".plus").forEach((button, index) => {
+    button.addEventListener("click", function () {
+        let valueCount = document.getElementById(`quantity-${index}`).value;
+        valueCount++;
+        document.getElementById(`quantity-${index}`).value = valueCount;
+        if (valueCount > 1) {
+            document.querySelectorAll(".minus")[index].removeAttribute("disabled");
+            document.querySelectorAll(".minus")[index].classList.remove("disabled");
+        }
+    });
+});
 
-document.querySelector(".plus").addEventListener("click", function(){
-    valueCount = document.getElementById("quantity").value;
-    valueCount++;
-    document.getElementById("quantity").value = valueCount
-    if(valueCount > 1) {
-        document.querySelector(".minus").removeAttribute("disabled")
-        document.querySelector(".minus").classList.remove("disabled")
-    }
-})
-
-document.querySelector(".minus").addEventListener("click", function(){
-    valueCount = document.getElementById("quantity").value;
-    valueCount--;
-    document.getElementById("quantity").value = valueCount
-
-    if(valueCount == 1) {
-        document.querySelector("minus").setAttribute("disabled", "disabled")
-    }
-})
+document.querySelectorAll(".minus").forEach((button, index) => {
+    button.addEventListener("click", function () {
+        let valueCount = document.getElementById(`quantity-${index}`).value;
+        if (valueCount == 1) {
+            button.setAttribute("disabled", "disabled");
+        } else {
+            valueCount--;
+            document.getElementById(`quantity-${index}`).value = valueCount;
+        }
+    });
+});

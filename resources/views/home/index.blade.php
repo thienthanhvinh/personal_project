@@ -15,9 +15,9 @@
 <body>
     <div class="w-full">
         <div class="flex items-center justify-between px-20 bg-[#F1F1F1]">
-            <div class="w-[100px]">
+            <div class="w-[250px]">
                 <a href="http://localhost/unitop.vn/back-end/laravel_again/project/personal_project/">
-                    <img src="public/images/logo.png" alt="" class="w-full h-full object-cover">
+                    <img src="https://bizweb.dktcdn.net/100/369/010/themes/914385/assets/logo.png?1696566867779" alt="" class="w-full h-full object-cover">
                 </a>
             </div>
             <div>

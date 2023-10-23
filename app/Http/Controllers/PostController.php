@@ -8,6 +8,6 @@ class PostController extends Controller
 {
     //
     function list() {
-        return view('post.list');
+        return view('post.test');
     }
 }
